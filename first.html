@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Result Card</h1>
+    <script>
+        var subject_name1 = prompt(`Enter Your First course Name`);
+        var cr1 = readInt(prompt(`Enter credit hours for this course`));
+        var gp1 = prompt(`Enter Grade Points of this course`);
+
+        var subject_name2 = prompt(`Enter Your Second course Name`);
+        var cr2 = prompt(`Enter credit hours for this course`);
+        var gp2 = prompt(`Enter Grade Points of this course`);
+
+        var subject_name3 = prompt(`Enter Your Third course Name`);
+        var cr3 = prompt(`Enter credit hours for this course`);
+        var gp3 = prompt(`Enter Grade Points of this course`);
+
+        var subject_name4 = prompt(`Enter Your Fourth course Name`);
+        var cr4 = prompt(`Enter credit hours for this course`);
+        var gp4 = prompt(`Enter Grade Points of this course`);
+
+        var subject_name5 = prompt(`Enter Your Fifth course Name`);
+        var cr5 = prompt(`Enter credit hours for this course`);
+        var gp5 = prompt(`Enter Grade Points of this course`);
+
+        var total_cr = prompt("Enter your total credit hours");
+        console.log(`Total Credit hours = ` + total_cr);
+        var total_gp = ((gp1 * cr1) + (gp2 * cr2) + (gp3 * cr3) + (gp4 * cr4) + (gp5 * cr5));
+        console.log(`Total Grade Points = ` + total_gp);
+        var gpa = total_gp / total_cr;
+        console.log(`Your GPA = ` + gpa);</script>
+</body>
+
+</html>
