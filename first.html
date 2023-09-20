@@ -10,32 +10,164 @@
 <body>
     <h1>Result Card</h1>
     <script>
-        var subject_name1 = prompt(`Enter Your First course Name`);
-        var cr1 = readInt(prompt(`Enter credit hours for this course`));
-        var gp1 = prompt(`Enter Grade Points of this course`);
+        var cr_hr = 3;
 
-        var subject_name2 = prompt(`Enter Your Second course Name`);
-        var cr2 = prompt(`Enter credit hours for this course`);
-        var gp2 = prompt(`Enter Grade Points of this course`);
+        var OR = prompt("Enter Operation Research Marks");
+        var or_gradePoints;
+        var or_grade;
 
-        var subject_name3 = prompt(`Enter Your Third course Name`);
-        var cr3 = prompt(`Enter credit hours for this course`);
-        var gp3 = prompt(`Enter Grade Points of this course`);
+        var DB = prompt("Enter Database Marks");
+        var db_gradePoints;
+        var db_grade;
 
-        var subject_name4 = prompt(`Enter Your Fourth course Name`);
-        var cr4 = prompt(`Enter credit hours for this course`);
-        var gp4 = prompt(`Enter Grade Points of this course`);
+        var WEB = prompt("Enter Web Application Marks");
+        var web_gradePoints;
+        var web_grade;
 
-        var subject_name5 = prompt(`Enter Your Fifth course Name`);
-        var cr5 = prompt(`Enter credit hours for this course`);
-        var gp5 = prompt(`Enter Grade Points of this course`);
+        var SE = prompt("Enter Software Engineering Marks");
+        var se_gradePoints;
+        var se_grade;
 
-        var total_cr = prompt("Enter your total credit hours");
-        console.log(`Total Credit hours = ` + total_cr);
-        var total_gp = ((gp1 * cr1) + (gp2 * cr2) + (gp3 * cr3) + (gp4 * cr4) + (gp5 * cr5));
-        console.log(`Total Grade Points = ` + total_gp);
-        var gpa = total_gp / total_cr;
-        console.log(`Your GPA = ` + gpa);</script>
+        var OS = prompt("Enter Operating Systems Makrs");
+        var os_gradePoints;
+        var os_grade;
+
+        if (OR >= 85) {
+            or_gradePoints = 4.0;
+            or_grade = "A+";
+        } else if (OR >= 80) {
+            or_gradePoints = 3.7;
+            or_grade = "A";
+        } else if (OR >= 75) {
+            or_gradePoints = 3.3;
+            or_grade = "B";
+        } else if (OR >= 70) {
+            or_gradePoints = 3.0;
+            or_grade = "C";
+        } else if (OR >= 65) {
+            or_gradePoints = 2.7;
+            or_grade = "D";
+        } else if (OR >= 60) {
+            or_gradePoints = 2.3;
+            or_grade = "E";
+        } else {
+            or_gradePoints = 2.0;
+            or_grade = "F";
+        }
+
+        if (DB >= 85) {
+            db_gradePoints = 4.0;
+            db_grade = "A+";
+        } else if (DB >= 80) {
+            db_gradePoints = 3.7;
+            db_grade = "A";
+        } else if (DB >= 75) {
+            db_gradePoints = 3.3;
+            db_grade = "B";
+        } else if (DB >= 70) {
+            db_gradePoints = 3.0;
+            db_grade = "C";
+        } else if (DB >= 65) {
+            db_gradePoints = 2.7;
+            db_grade = "D";
+        } else if (DB >= 60) {
+            db_gradePoints = 2.3;
+            db_grade = "E";
+        } else {
+            db_gradePoints = 2.0;
+            db_grade = "F";
+        }
+
+        if (WEB >= 85) {
+            web_gradePoints = 4.0;
+            web_grade = "A+";
+        } else if (WEB >= 80) {
+            web_gradePoints = 3.7;
+            web_grade = "A";
+        } else if (WEB >= 75) {
+            web_gradePoints = 3.3;
+            web_grade = "B";
+        } else if (WEB >= 70) {
+            web_gradePoints = 3.0;
+            web_grade = "C";
+        } else if (WEB >= 65) {
+            web_gradePoints = 2.7;
+            web_grade = "D";
+        } else if (WEB >= 60) {
+            web_gradePoints = 2.3;
+            web_grade = "E";
+        } else {
+            web_gradePoints = 2.0;
+            web_grade = "F";
+        }
+
+        if (SE >= 85) {
+            se_gradePoints = 4.0;
+            se_grade = "A+";
+        } else if (SE >= 80) {
+            se_gradePoints = 3.7;
+            se_grade = "A";
+        } else if (SE >= 75) {
+            se_gradePoints = 3.3;
+            se_grade = "B";
+        } else if (SE >= 70) {
+            se_gradePoints = 3.0;
+            se_grade = "C";
+        } else if (SE >= 65) {
+            se_gradePoints = 2.7;
+            se_grade = "D";
+        } else if (SE >= 60) {
+            se_gradePoints = 2.3;
+            se_grade = "E";
+        } else {
+            se_gradePoints = 2.0;
+            se_grade = "F";
+        }
+
+        if (OS >= 85) {
+            os_gradePoints = 4.0;
+            os_grade = "A+";
+        } else if (OS >= 80) {
+            os_gradePoints = 3.7;
+            os_grade = "A";
+        } else if (OS >= 75) {
+            os_gradePoints = 3.3;
+            os_grade = "B";
+        } else if (OS >= 70) {
+            os_gradePoints = 3.0;
+            os_grade = "C";
+        } else if (OS >= 65) {
+            os_gradePoints = 2.7;
+            os_grade = "D";
+        } else if (OS >= 60) {
+            os_gradePoints = 2.3;
+            os_grade = "E";
+        } else {
+            os_gradePoints = 2.0;
+            os_grade = "F";
+        }
+
+        var total_gradePoints =
+            or_gradePoints +
+            db_gradePoints +
+            web_gradePoints +
+            se_gradePoints +
+            os_gradePoints;
+        var total_grade = total_gradePoints / 5;
+
+        document.write("Operation Research Grade is " + or_grade + " " + or_gradePoints + "<br>");
+        document.write("Database Grade is " + db_grade + " " + db_gradePoints + "<br>");
+        document.write(
+            "Web Application Grade is " + web_grade + " " + web_gradePoints + "<br>"
+        );
+        document.write(
+            "Software Engineering Grade is " + se_grade + " " + se_gradePoints + "<br>"
+        );
+        document.write(
+            "Operating System Grade is " + os_grade + " " + os_gradePoints + "<br>"
+        );
+
+        document.write("Total GPA is " + total_grade + "<br>");</script>
 </body>
 
 </html>
